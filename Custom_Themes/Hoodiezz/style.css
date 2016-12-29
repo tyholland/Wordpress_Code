@@ -1,0 +1,1453 @@
+/*
+Theme Name: Test Hoodiezz
+Theme URI: http://tyswork.com/
+Description: Test Hoodiezz.com Theme
+Author: Ty Holland
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend {
+	background: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+body {
+	line-height: 1;
+}
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font-weight: normal;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote {
+	quotes: none;
+}
+blockquote:before, blockquote:after {
+	content: '';
+	content: none;
+}
+del {
+	text-decoration: line-through;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a img {
+	border: none;
+}
+.backLink {
+	display: none;
+}
+.sellHood {
+	text-align: center;
+	padding: 2% 0;
+}
+.productAds {
+	float: left;
+	width: 18%;
+	text-align: center;
+}
+.pgTitle {
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+.mainContent .pgTitle h1 {
+	margin-top: 0;
+	text-transform: uppercase;
+}
+.fleft {
+	float: left;
+}
+.fright {
+	float: right;
+}
+.width35 {
+	width: 35%;
+}
+.relative {
+	width: 100%;
+}
+.font10 {
+	font-size: 10px;
+}
+.center {
+	text-align: center;
+}
+.clear {
+	clear: both;
+}
+.showMobile {
+	display: none !important;
+}
+.hideMobile {
+	display: block !important;
+}
+
+/***************************************************************************
+
+Layout
+
+**************************************************************************/
+
+/*
+LAYOUT: Two columns
+DESCRIPTION: Two-column fixed layout with one sidebar right of content
+*/
+
+#container {
+	float: left;
+	margin: 0 auto;
+	width: 100%;
+}
+.mainContent {
+	margin: 0 280px 0 20px;
+	width: 100%;
+}
+#primary,
+#secondary {
+	float: right;
+	overflow: hidden;
+	width: 220px;
+	margin: 40px 0 0 0;
+}
+#secondary {
+	clear: right;
+}
+#footer {
+	clear: both;
+	width: 100%;
+	float: left;
+	border-top: 1px solid #ccc;
+}
+/*
+LAYOUT: One column, no sidebar
+DESCRIPTION: One centered column with no sidebar
+*/
+
+.one-column .mainContent {
+	margin: 0 auto 2%;
+	width: 100%;
+	float: left;
+}
+/*
+LAYOUT: Full width, no sidebar
+DESCRIPTION: Full width content with no sidebar; used for attachment pages
+*/
+
+.single-attachment .mainContent {
+	margin: 0 auto;
+	width: 100%;
+}
+
+/***************************************************************************
+
+Fonts
+
+**************************************************************************/
+
+body,
+input,
+textarea,
+.page-title span,
+.pingback a.url {
+	font-family: century gothic, serif;
+}
+h3#comments-title,
+h3#reply-title,
+#access .menu,
+#access div.menu ul,
+#cancel-comment-reply-link,
+.form-allowed-tags,
+#site-info,
+#site-title,
+#wp-calendar,
+.comment-meta,
+.comment-body tr th,
+.comment-body thead th,
+.entry-content label,
+.entry-content tr th,
+.entry-content thead th,
+.entry-meta,
+.entry-title,
+.entry-utility,
+#respond label,
+.navigation,
+.page-title,
+.pingback p,
+.reply,
+.widget-title,
+.wp-caption-text {
+	font-family: century gothic, serif;
+}
+input[type=submit] {
+	font-family: century gothic, serif;
+}
+pre {
+	font-family: century gothic, serif;
+}
+code {
+	font-family: century gothic, serif;
+}
+
+/***************************************************************************
+
+Structure
+
+**************************************************************************/
+
+/* The main theme structure */
+#colophon,
+#branding,
+#main,
+#cover {
+	margin: 0 auto;
+	width: 960px;
+}
+#cover {
+	background: none repeat scroll 0 0 #FFFFFF;
+    box-shadow: 0 0 5px #888888;
+}
+#wrapper {
+	width: 1000px;
+    margin: 0px auto;
+}
+/* Structure the footer area */
+#footer-widget-area {
+	overflow: hidden;
+}
+#footer-widget-area .widget-area {
+	float: left;
+	margin-right: 20px;
+	width: 220px;
+}
+#footer-widget-area #fourth {
+	margin-right: 0;
+}
+#footer a:hover {
+	color: #6D757D;
+}
+#site-info {
+	float: left;
+	font-size: 14px;
+	font-weight: bold;
+	width: 700px;
+}
+#site-generator {
+	float: right;
+    padding: 30px 20px 20px 0;
+    width: 170px;
+}
+
+/***************************************************************************
+
+Global Elements
+
+**************************************************************************/
+
+/* Main global 'theme' and typographic styles */
+body {
+	background: #fff;
+}
+body,
+input,
+textarea {
+	color: #666;
+	font-size: 14px;
+	line-height: 18px;
+}
+hr {
+	background-color: #000;
+	border: 0;
+	clear: both;
+	height: 8px;
+	margin-bottom: 18px;
+}
+/* Text elements */
+p {
+	margin-bottom: 18px;
+}
+ul {
+	list-style: square;
+	margin: 0 0 18px 1.5em;
+}
+ol {
+	list-style: decimal;
+	margin: 0 0 18px 1.5em;
+}
+ol ol {
+	list-style: upper-alpha;
+}
+ol ol ol {
+	list-style: lower-roman;
+}
+ol ol ol ol {
+	list-style: lower-alpha;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+	margin-bottom: 0;
+}
+dl {
+	margin: 0 0 24px 0;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin-bottom: 18px;
+}
+strong {
+	font-weight: bold;
+}
+cite,
+em,
+i {
+	font-style: italic;
+}
+big {
+	font-size: 131.25%;
+}
+ins {
+	background: #ffc;
+	text-decoration: none;
+}
+blockquote {
+	font-style: italic;
+	padding: 0 3em;
+}
+blockquote cite,
+blockquote em,
+blockquote i {
+	font-style: normal;
+}
+pre {
+	background: #f7f7f7;
+	color: #222;
+	line-height: 18px;
+	margin-bottom: 18px;
+	padding: 1.5em;
+}
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+sup,
+sub {
+	height: 0;
+	line-height: 1;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+input[type="text"],
+textarea {
+	background: #f9f9f9;
+	border: 1px solid #ccc;
+	box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	-moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	-webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+}
+a:link {
+	color: #000;
+}
+a:visited {
+	color: #000;
+}
+a:active,
+a:hover {
+	color: #000;
+}
+.hoodSprite  {
+	background: url('http://hoodiezz.com/wp-content/uploads/2015/08/hoodieSprite.png') no-repeat;
+    display: inline-block;
+}
+/* Text meant only for screen readers */
+.screen-reader-text {
+	position: absolute;
+	left: -9000px;
+}
+
+/***************************************************************************
+
+Header
+
+**************************************************************************/
+
+#header {
+	padding-top: 10px;
+	float: left;
+	width: 100%;
+}
+#site-title {
+	float: left;
+	font-size: 30px;
+	line-height: 36px;
+	margin: 0 0 18px 0;
+	width: 700px;
+}
+#site-title a {
+	color: #000;
+	font-weight: bold;
+	text-decoration: none;
+}
+#site-description {
+	clear: right;
+    float: right;
+    font-style: italic;
+    margin: -30px 0 14px;
+    padding: 0 20px 0 0;
+}
+#headerRight {
+	float: right;
+	padding: 0 20px 0 0;
+	text-align: right;
+	font-size: 16px;
+	color: #000;
+	width: 62%;
+}
+#headerRight a:hover {
+	color: #d90023;
+}
+#headerRight a {
+	text-decoration: none;
+}
+.socialHeader {
+	float: right;
+	width: 18%;
+	margin: 5.8% 6% 0 0;
+}
+.headerText {
+	margin-top: 10%;
+}
+#headerRight h2 {
+	font-size: 20px;
+	text-align: center;
+	line-height: 25px;
+	width: 400px;
+	margin-top: -15px;
+}
+.hoodLogo {
+	background-position: 5px -235px;
+    width: 300px;
+    height: 95px;
+    background-size: 675%;
+    margin-left: 10px;
+}
+.hoodFb,
+.hoodInsta,
+.hoodTweet,
+.hoodPin {
+	width: 40%;
+    height: 43px;
+    background-position: -75px -176px;
+    margin-left: 10px;
+}
+.hoodInsta {
+    background-position: 0px -176px;
+}
+.hoodTweet {
+    background-position: -225px -176px;
+}
+.hoodPin {
+    background-position: -150px -176px;
+}
+.featHood1,
+.featHood2,
+.featHood3,
+.featHood4,
+.featHood5 {
+	width: 150px;
+	height: 150px;
+	background-position: -732px 0px;
+}
+.featHood2 {
+    background-position: -180px 0px;
+}
+.featHood3 {
+    background-position: -550px 0px;
+}
+.featHood4 {
+    background-position: 0px 0px;
+}
+.featHood5 {
+    background-position: -370px 0px;
+}
+.socialHeader a.btnRetail {
+    width: 190%;
+    right: 55%;
+    position: relative;
+}
+
+/***************************************************************************
+
+Navigation Menu
+
+**************************************************************************/
+
+#access {
+	background: #fff;
+	width: 100%;
+	padding: 10px 0 0;
+	text-transform: uppercase;
+	float: left;
+}
+#access .headerNav {
+	color: #d90023;
+	font-weight: bold;
+}
+#access .menu-header,
+div.menu {
+	font-size: 18px;
+	margin: 0;
+	width: 100%;
+}
+#access .menu-header ul,
+div.menu ul {
+	list-style: none;
+	margin: 0 auto;
+	height: 38px;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000; 
+}
+#access .menu-header li,
+div.menu li {
+	float: left;
+	position: relative;  
+	width: 28%;
+	margin: 0 2%
+}
+#access a {
+	display: block;
+	line-height: 38px;
+	padding: 0;
+	text-decoration: none; 
+	text-align: center;
+}
+#access ul ul {
+	display: none;
+	position: absolute;
+	top: 28px;
+	left: .5em;
+	float: left;
+	width: auto;
+	z-index: 9999;
+}
+#access .menu-header ul ul,
+div.menu ul ul {
+	list-style: none;
+	margin: 0 auto;
+	height: 38px;
+	border: none;
+}
+#access .menu-header ul ul li,
+div.menu ul ul li {
+	float: left;
+	position: relative;  
+	width: 46%;
+	margin: 0 3%
+}
+#access ul ul li {
+	min-width: auto;
+}
+#access ul ul ul {
+	left: 100%;
+	top: 0;
+}
+#access ul ul a, 
+#access ul ul a:active,
+#access ul ul a:visited,
+#access ul ul li.current_page_item > a {
+	line-height: 18px;
+	padding: 5% 0;
+	color: #000;
+	width: 220px;
+	margin: 0 0 -2px 0;
+	background: #fff;
+	height: 15px;
+	border: 2px solid #000;
+	font-size: 14px;
+	text-align: left;
+	text-indent: 5%;
+}                       
+#access ul ul :hover > a,
+#access ul ul li.current_page_item > a:hover {
+	color: #d90023;
+}
+#access li:hover > a,
+#access ul li.current_page_item > a:hover {
+	color: #d90023;
+}
+#access ul li:hover > ul {
+	display: block;
+}
+#access ul li.current_page_item > a,
+#access ul li.current-menu-ancestor > a,
+#access ul li.current-menu-item > a,
+#access ul li.current-menu-parent > a {
+	color: #d90023;
+	font-weight: bold;
+}
+#access ul ul li.current_page_item > a,
+#access ul ul li.current-menu-ancestor > a,
+#access ul ul li.current-menu-item > a,
+#access ul ul li.current-menu-parent > a {
+	color: #d90023;
+	font-weight: normal;
+}
+* html #access ul li.current_page_item a,
+* html #access ul li.current-menu-ancestor a,
+* html #access ul li.current-menu-item a,
+* html #access ul li.current-menu-parent a,
+* html #access ul li a:hover {
+	color: #d90023;                    
+	font-weight: bold;
+}
+
+/***************************************************************************
+
+Content
+
+**************************************************************************/
+
+#main {
+	clear: both;
+	overflow: hidden;
+}
+.mainContent {
+	margin-bottom: 36px;
+}
+.mainContent,
+.mainContent input,
+.mainContent textarea {
+	color: #000000;
+	font-size: 16px;
+	line-height: 24px;
+}
+.mainContent p,
+.mainContent ul,
+.mainContent ol,
+.mainContent dd,
+.mainContent pre,
+.mainContent hr {
+	margin-bottom: 24px;
+}
+.mainContent ul ul,
+.mainContent ol ol,
+.mainContent ul ol,
+.mainContent ol ul {
+	margin-bottom: 0;
+}
+.mainContent pre,
+.mainContent kbd,
+.mainContent tt,
+.mainContent var {
+	font-size: 15px;
+	line-height: 21px;
+}
+.mainContent code {
+	font-size: 13px;
+}
+.mainContent dt,
+.mainContent th {
+	color: #000;
+}
+.mainContent h1,
+.mainContent h2,
+.mainContent h3,
+.mainContent h4,
+.mainContent h5,
+.mainContent h6 {
+	color: #000;
+	line-height: 1.5em;
+	margin: 20px 0;
+}
+.mainContent table {
+	border: none;
+	text-align: left;
+	width: 100%;
+}
+.mainContent th,
+.mainContent thead th {
+	color: #888;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 18px;
+	padding: 9px 24px;
+}
+.hentry {
+	margin: 0 0 48px 0;
+}
+.home .sticky {
+	background: #f2f7fc;
+	border-top: 4px solid #000;
+	margin-left: -20px;
+	margin-right: -20px;
+	padding: 18px 20px;
+}
+.single .hentry {
+	margin: 0 0 36px 0;
+}
+.page-title {
+	color: #000;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0 0 36px 0;
+}
+.page-title span {
+	color: #333;
+	font-size: 16px;
+	font-style: italic;
+	font-weight: normal;
+}
+.mainContent a:link{
+	color: #000;
+	text-decoration: none;
+}
+.mainContent a:hover{
+	color: #d90023;
+	text-decoration: none;
+}
+.page-title a:link,
+.page-title a:visited {
+	color: #888;
+	text-decoration: none;
+}
+.page-title a:active,
+.page-title a:hover {
+	color: #ff4b33;
+}
+.mainContent .entry-title {
+	color: #000;
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 1.3em;
+	margin: 20px 0 10px 10px;
+}
+.mainContent .entry-title a:link,
+.mainContent .entry-title a:visited {
+	color: #000;
+	text-decoration: underline;
+}
+.mainContent .entry-title a:active,
+.mainContent .entry-title a:hover {
+	color: #0066cc;
+	text-decoration: underline;
+}
+.entry-meta {
+	color: #888;
+	font-size: 12px;
+}
+.entry-meta abbr,
+.entry-utility abbr {
+	border: none;
+}
+.entry-meta abbr:hover,
+.entry-utility abbr:hover {
+	border-bottom: 1px dotted #666;
+}
+.entry-content,
+.entry-summary {
+	clear: both;
+	padding: 0 1% 2% 1%;
+	float: left;
+	width: 98%;
+}
+.mainContent .entry-summary p:last-child {
+	margin-bottom: 12px;
+}
+.entry-content fieldset {
+	border: 1px solid #e7e7e7;
+	margin: 0 0 24px 0;
+	padding: 24px;
+}
+.entry-content fieldset legend {
+	background: #fff;
+	color: #000;
+	font-weight: bold;
+	padding: 0 24px;
+}
+.entry-content input {
+	margin: 3px 0 7px 0;
+}
+.entry-content input.file,
+.entry-content input.button {
+	margin: 0;
+}
+.entry-content label {
+	color: #888;
+	font-size: 12px;
+}
+.entry-content select {
+	margin: 0 2% 15px 0;
+}
+.entry-content sup,
+.entry-content sub {
+	font-size: 10px;
+}
+.entry-content blockquote.left {
+	float: left;
+	margin-left: 0;
+	margin-right: 24px;
+	text-align: right;
+	width: 33%;
+}
+.entry-content blockquote.right {
+	float: right;
+	margin-left: 24px;
+	margin-right: 0;
+	text-align: left;
+	width: 33%;
+}
+.page-link {
+	clear: both;
+	color: #000;
+	font-weight: bold;
+	margin: 0 0 22px 0;
+	word-spacing: 0.5em;
+}
+.page-link a:link,
+.page-link a:visited {
+	background: #f1f1f1;
+	color: #333;
+	font-weight: normal;
+	padding: 0.5em 0.75em;
+	text-decoration: none;
+}
+.home .sticky .page-link a {
+	background: #d9e8f7;
+}
+.page-link a:active,
+.page-link a:hover {
+	color: #ff4b33;
+}
+body.page .edit-link {
+	clear: both;
+	display: block;
+}
+#entry-author-info {
+	background: #f2f7fc;
+	border-top: 4px solid #000;
+	clear: both;
+	font-size: 14px;
+	line-height: 20px;
+	margin: 24px 0;
+	overflow: hidden;
+	padding: 18px 20px;
+}
+#entry-author-info #author-avatar {
+	background: #fff;
+	border: 1px solid #e7e7e7;
+	float: left;
+	height: 60px;
+	margin: 0 -104px 0 0;
+	padding: 11px;
+}
+#entry-author-info #author-description {
+	float: left;
+	margin: 0 0 0 104px;
+}
+#entry-author-info h2 {
+	color: #000;
+	font-size: 100%;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+.entry-utility {
+	clear: both;
+	color: #888;
+	font-size: 12px;
+	line-height: 18px;
+}
+.mainContent .entry-meta a:link,
+.mainContent .entry-utility a:link,
+.mainContent .entry-summary a:link{
+	color: #000;
+	text-decoration: underline;
+}
+.mainContent .entry-meta a:hover,
+.mainContent .entry-utility a:hover,
+.mainContent .entry-summary a:hover{
+	color: #0066cc;
+	text-decoration: underline;
+}
+.mainContent .video-player {
+	padding: 0;
+}
+.smallTxt{
+	padding: 15px 20px 10px 20px;
+	line-height: 18px;
+}
+.mainContent .smallTxt p{
+	padding: 5px 0 10px 0;	
+	margin: 0;
+}
+.mainContent .smallTxt img {
+	width: 100%;
+	padding: 20px 0;
+}
+.homeAds {
+	padding: 10px 0 20px 0;
+	text-align: center;
+}
+.homeFeat {
+	list-style: none;
+	text-align: center;
+	margin: 2% 0 0 0;
+}
+.homeFeat li {
+	float: left;
+	width: 21%;
+	margin: 0 0 1% 2%;
+	border: 2px solid #000;
+	text-align: left;
+	padding: 0 0 0 1%;
+	font-size: 12px;
+}
+.homeFeat li div {
+	width: 55%;
+	font-size: 12px;
+	float: left;
+}
+.homeFeat img {
+	float: right;
+	width: 45%;
+}
+.homeFeat strong {
+	text-decoration: underline;
+	font-weight: bold;
+	font-size: 14px;
+}
+.homeFeat a,
+.homeFeat a:hover {
+	color: #000;
+}
+form.center input[type="text"] {
+	width: 50%;
+	height: 50px;
+	padding: 0 0 0 1%;
+}
+form #submit {
+	width: 10%;
+	height: 52px;
+	font-size: 22px;
+	position: relative;
+	top: 1px;
+}
+.homeProd #high {
+	margin-bottom: 2%;
+	margin-top: 1%;
+}
+.mission {
+	margin-top: 10px;
+	float: left;
+}
+.hoodDayImg {
+	width: 50%;
+}
+.hoodDayImg h1 {
+	text-align: center;
+}
+.hoodDayImg img {
+	width: 400px;
+	height: 300px;
+}
+.hoodDayTxt {
+	width: 46%;
+	margin: 0 0 0 2%;
+	font-size: 14px;
+	padding: 0 0 0 2%;
+}
+.hoodDayTxt h1 {
+	margin: 0 0 20px 0;
+}
+#homeGrid li {
+	width: 32%;
+	list-style: none;
+}
+.handPicked {
+	width: 40%;
+    float: left;
+    margin-top: -7%;
+}
+.homeCategory {
+	width: 60%;
+    float: left;
+}
+
+/***************************************************************************
+
+Footer
+
+**************************************************************************/
+#footerLinks,
+#footerLinks2 {
+	padding: 3% 3%; 
+	text-align: left; 
+	float: left;
+	width: 44%;
+	text-transform: uppercase;
+}
+.mainContent #footerLinks a,
+.mainContent #footerLinks2 a {
+	text-decoration: none;
+	color: #000;
+}
+#footerLinks a:hover,
+#footerLinks2 a:hover {
+	color: #000;
+}
+.btn {
+	background: #000;
+	padding: 3%;
+	border-radius: 10px;
+}
+.mainContent #footerLinks a.btn {
+	color: #fff;
+	float: left;
+}
+.menuTrigger, .mobileMenu {
+	display: none;
+}
+
+/***************************************************************************
+
+Exclusives and Designer Pages
+
+**************************************************************************/
+#exAds {
+	padding: 10px 0 0 0;
+	text-align: center;
+}
+.exclusive {
+	float: left;
+	width: 25%;
+	padding: 2% 4%;
+}
+.designCopy {
+	margin-bottom: 20px;
+}
+.designLogo {
+	background-position: 5px -350px;
+    width: 300px;
+    height: 281px;
+    background-size: 675%;
+}
+
+/***************************************************************************
+
+Paid Placement Pages
+
+**************************************************************************/
+.pro1,
+.pro2,
+.pro3,
+.pro4,
+.pro5,
+.pro6,
+.pro7,
+.pro8,
+.pro9,
+.pro10,
+.pro11,
+.pro12,
+.pro13,
+.pro14,
+.pro15,
+.pro16,
+.pro17,
+.pro18,
+.pro19,
+.pro20 {
+	display: none;
+	line-height: 38px;
+}
+.leftSide {
+	float: left;
+	width: 100%;
+}
+.leftSide li {
+	width: 40%;
+	list-style: none;
+}
+.leftSide .alternate {
+	width: 60%;
+}
+.prodUpload select {
+	margin: 12px 0 7px 0;
+}
+
+.prodUpload em {
+	font-size: 12px;
+}
+
+/***************************************************************************
+
+Just Dropped & Mall Page	
+
+**************************************************************************/
+#jDropped,
+#theMall {
+	margin-top: 20px;
+}
+#jDropped h2,
+#theMall h2 {
+	margin: 0;
+}
+#productDiv .entry-title {
+	display: none;
+}
+#productDiv {
+	width: 82%;
+	float: left; 
+	margin: 0 0 40px 0; 
+	position: relative;
+}
+#productDiv h1 {
+	margin-top: 0;
+}
+#high {
+	margin: 0 0 0 2%;
+	list-style: none; 
+	width: 99%; 
+	font-size: 12px; 
+	padding: 0; 
+	line-height: 18px;
+	float: left;
+}
+#productSpace {
+	padding: 1% 0 4% 0;
+	margin: 0;
+	width: 147px;
+	height: 260px;
+	float: left; 
+	border: 1px solid #ccc;
+	color: #000;
+	text-align: center;
+}
+#productSpace a {
+	float: none;
+}
+#productSpace div {
+	width: 96%;
+	padding: 2% 2%;
+}
+#productSpace .prodName {
+	width: 100%;
+	margin-bottom: 10%;
+	height: 90px;
+	overflow: hidden;
+}
+#productSpace img.logoImg {
+	width: 45%;
+	height: 21px;
+	padding: 0 0 0 5%;
+}
+#productSpace input[type="button"] {
+	margin: 10% 0;
+}
+#productSpace .prodDescript {
+	height: 60px;
+	overflow: hidden;
+}
+.money {
+	color: #d90023;
+}
+.badSearch {
+	font-weight: bold;
+	margin: 0 0 5% 0;
+	width: 100%;
+}
+.errorMsg {
+	margin: 5% 0;
+	float: left;
+	width: 82%;
+}
+.prodBuy a{
+	color: #000;
+	text-decoration: underline;
+}
+.mainContent #theMall .btn,
+.mainContent #jDropped .btn {
+	background: #000;
+	color: #fff;
+	padding: 1%;
+	border-radius: 10px;
+}
+.bottomPg {
+	margin: 2% 2% 0 0;
+}
+.topPg {
+	margin: 0 2% 2% 0;
+}
+.sortSection {
+	margin: 0 2% 1% 0;
+	float: right;
+	width: 100%;
+	text-align: right;
+}
+#prices {
+	margin: 0 11% 0 0;
+}
+
+.retail li {
+	float: left;
+	width: 15%;
+	list-style: none;
+	padding: 1% 2%;
+	height: 400px;
+	border: 1px solid #ccc;
+}
+a.btnRetail {
+    border: 1px solid #000;
+    color: #fff;
+    background: #06c;
+    padding: 4%;
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+a.btnRetail:hover,
+#headerRight .socialHeader a.btnRetail:hover {
+	color: #fff;
+}
+.retail img {
+	width: 100%;
+}
+.retail {
+	margin-bottom: 4%;
+}
+.seeIt {
+	margin-bottom: 3%;
+}
+#productDiv select {
+	margin: 0 0 2% 2%;
+}
+
+/***************************************************************************
+
+Subscribe Page	
+
+**************************************************************************/
+#email {
+	width: 30%;
+	margin-bottom: 2%;
+}
+
+/***************************************************************************
+
+Contact Us Page	
+
+**************************************************************************/
+.entry-content .contactInput {
+	width: 30%;
+	margin-bottom: 2%;
+}
+
+/***************************************************************************
+
+Buy Hoodies Online Page	
+
+**************************************************************************/
+#buyHoodies ul {
+	list-style: none;
+	float: left;
+	width: 100%;
+}
+#buyHoodies li {
+	float: left;
+	width: 20%;
+	padding: 2%;
+	text-align: center;
+}
+#buyHoodies h3 {
+	margin: 0 0 10px 0;
+}
+#buyHoodies img {
+	border: 2px solid #000;
+}
+
+/***************************************************************************
+
+Sweepstakes Page	
+
+**************************************************************************/
+.paidContest {
+	width: 100%;
+	text-align: center;
+}
+.gleam {
+	position: relative;
+	margin: -13% 0 13% 40%;
+}
+.disclaimer {
+	position: relative;
+    top: -50px;
+    width: 60%;
+    margin: 0 20%;
+    font-size: 12px;
+    text-align: left;
+}
+
+/***************************************************************************
+
+jQuery UI
+
+**************************************************************************/
+.ui-dialog .ui-state-default .ui-icon,
+.ui-dialog .ui-state-active .ui-icon,
+.ui-dialog .ui-state-hover .ui-icon,
+.ui-dialog .ui-state-focus .ui-icon,
+.ui-dialog .ui-widget-header .ui-icon,
+.ui-widget-content .ui-icon,
+.ui-dialog .ui-icon {
+	background-image: url("http://hoodiezz.com/wp-content/cache/minify/000001/images/ui-icons_888888_256x240.png");
+}
+
+/***************************************************************************
+
+Mobile Layout
+
+**************************************************************************/
+@media (max-width: 740px) {
+	.showMobile {
+		display: block !important;
+	}
+	.hideMobile {
+		display: none !important;
+	}
+	#wrapper,
+	#colophon,
+	#branding,
+	#main,
+	#cover,
+	.handPicked,
+	.homeCategory,
+	#productDiv,
+	#Spreadshop {
+		width: 100%;
+	}
+	#headerRight,
+	nav,
+	footer,
+	.productAds {
+		display: none;
+	}
+	#header {
+		border-bottom: 2px solid #000;
+		padding: 0;
+	}
+	.hoodLogo {
+		background-position: 0 -120px;
+		width: 50%;
+		height: 65px;
+		background-size: 690% 1200%;
+		margin: 0 25%;
+	}
+	#homeGrid {
+		margin: 0;
+	}
+	#homeGrid li {
+		width: 49%;
+	}
+	.retail {
+		margin: 0;
+		width: 99%;
+	}
+	.retail li {
+		height: auto;
+		width: 96%;
+	}
+	.retail img {
+		height: auto;
+	}
+	#jDropped,
+	#theMall {
+		margin-top: 2%;
+	}
+	#high {
+		margin: 0;
+		width: 100%;
+	}
+	#productSpace {
+		width: 49.3%;
+		height: 350px;
+	}
+	.mainImg {
+		width: 60%;
+		height: auto;
+	}
+	#Spreadshop {
+		width: 100%;
+		height: 1200px;
+	}
+	.leftSide li {
+		width: 100%;
+		list-style: none;
+	}
+	.leftSide .alternate {
+		width: 100%;
+		margin-bottom: 5%;
+	}
+	.prodUpload em {
+		width: 100%;
+		float: left;
+	}
+	.menuTrigger {
+	    display: block;
+	    position: absolute;
+	    border: 2px solid #000;
+	    padding: 1%;
+	    left: 4%;
+	    font-size: 16px;
+	    color: #fff;
+	    background: #000;
+	    margin: 3% 0 0 0;
+	}
+	.mobileMenu ul {
+	    list-style: none;
+	    padding: 0;
+	    margin: 0;
+	    float: left;
+	    width: 100%;
+	}
+	.mobileMenu li a {
+	    padding: 4% 2%;
+	    width: 92%;
+	    float: left;
+	    border-bottom: 1px solid #dde1e2;
+	    margin: 0 2%;
+	    font-size: 16px;
+	}
+	.entry-content .contactInput,
+	#email {
+		width: 90%;
+	}
+	#productDiv select {
+		width: 100%;
+		padding: 2% 0;
+		margin: 0 0 4% 0;
+		font-size: 14px;
+	}
+}
